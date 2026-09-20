@@ -1,0 +1,28 @@
+[package]
+name = "parquetpeek"
+version = "0.1.0"
+edition = "2021"
+description = "Inspects a Parquet file's schema, row groups, row count, and per-column min/max/null-count straight from the footer metadata, no Python/pandas required"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/parquetpeek"
+readme = "README.md"
+keywords = ["parquet", "arrow", "cli", "inspect", "schema"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "parquetpeek"
+path = "src/lib.rs"
+
+[[bin]]
+name = "parquetpeek"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+parquet = { version = "60", default-features = false, features = ["arrow"] }
+arrow = "60"
+
+[dev-dependencies]
+tempfile = "3"
