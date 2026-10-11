@@ -7,6 +7,12 @@ existing thing; there's no simple, dependency-light Rust CLI for this
 despite Rust's own strong Arrow/Parquet ecosystem (`arrow-rs`,
 DataFusion) already existing.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
